@@ -1,6 +1,6 @@
 /* global fleximpleblocksPluginData */
 const InlineStyles = ({ defaultClassName, attributes: { blockId, attr1, attr2, attr3 } }) => {
-	const blockSelector = `.${defaultClassName}[data-block="${blockId}"]`;
+	const blockSelector = `.${defaultClassName}[data-block-id="${blockId}"]`;
 
 	return (
 		<style>
