@@ -15,19 +15,19 @@ const INNER_BLOCKS_TEMPLATE = [
 		{
 			level: 2,
 			/* translators: content placeholder */
-			placeholder: __('Write a title…', 'fleximple-blocks-example'),
+			placeholder: __('Write a title…', 'fleximple-blocks-template'),
 		},
 	],
 	[
 		'core/paragraph',
 		{
 			/* translators: content placeholder */
-			placeholder: __('Write some content…', 'fleximple-blocks-example'),
+			placeholder: __('Write some content…', 'fleximple-blocks-template'),
 		},
 	],
 ];
 
-export default function ExampleEdit({
+export default function TemplateEdit({
 	attributes,
 	attributes: { blockId, attr1, attr2, attr3 },
 	setAttributes,

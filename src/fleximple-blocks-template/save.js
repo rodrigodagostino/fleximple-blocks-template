@@ -6,7 +6,7 @@ import InlineStyles from './inline-styles';
 
 const { name } = metadata;
 
-function ExampleSave({ attributes, attributes: { blockId, attr1, attr2, attr3 } }) {
+function TemplateSave({ attributes, attributes: { blockId, attr1, attr2, attr3 } }) {
 	const defaultClassName = getBlockDefaultClassName(name);
 
 	const blockProps = useBlockProps.save();
@@ -19,4 +19,4 @@ function ExampleSave({ attributes, attributes: { blockId, attr1, attr2, attr3 } 
 	);
 }
 
-export default ExampleSave;
+export default TemplateSave;

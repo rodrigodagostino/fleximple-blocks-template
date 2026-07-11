@@ -24,11 +24,11 @@ registerBlockType(metadata.name, {
 
 // Provide a custom block class
 function setBlockCustomClassName(className, blockName) {
-	return blockName === name ? 'fleximple-blocks-example' : className;
+	return blockName === name ? 'fleximple-blocks-template' : className;
 }
 
 wp.hooks.addFilter(
 	'blocks.getBlockDefaultClassName',
-	'fleximple-blocks/fleximple-blocks-example',
+	'fleximple-blocks/fleximple-blocks-template',
 	setBlockCustomClassName
 );

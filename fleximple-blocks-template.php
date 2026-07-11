@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name:       Fleximple Blocks: Example
+ * Plugin Name:       Fleximple Blocks: Template
  * Description:       Do something in particular.
  * Version:           1.0.0
  * Requires at least: 6.7
@@ -9,21 +9,21 @@
  * Author:            Rodrigo D’Agostino
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       fleximple-blocks-example
+ * Text Domain:       fleximple-blocks-template
  *
- * @package FleximpleBlocksExample
+ * @package FleximpleBlocksTemplate
  */
 
 if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
-define('FB_EXAMPLE_ID', 'fleximple-blocks-example');
-define('FB_EXAMPLE_VERSION', '1.0.0');
-define('FB_EXAMPLE_PLUGIN_DIR', plugin_dir_path(__FILE__));
-define('FB_EXAMPLE_PLUGIN_URL', plugin_dir_url(__FILE__));
-define('FB_EXAMPLE_PLUGIN_FILE', __FILE__);
-define('FB_EXAMPLE_PLUGIN_BASE', plugin_basename(__FILE__));
+define('FB_TEMPLATE_ID', 'fleximple-blocks-template');
+define('FB_TEMPLATE_VERSION', '1.0.0');
+define('FB_TEMPLATE_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('FB_TEMPLATE_PLUGIN_URL', plugin_dir_url(__FILE__));
+define('FB_TEMPLATE_PLUGIN_FILE', __FILE__);
+define('FB_TEMPLATE_PLUGIN_BASE', plugin_basename(__FILE__));
 
 /**
  * Registers the block using a `blocks-manifest.php` file, which improves the performance of block type registration.
@@ -33,9 +33,9 @@ define('FB_EXAMPLE_PLUGIN_BASE', plugin_basename(__FILE__));
  * @see https://make.wordpress.org/core/2025/03/13/more-efficient-block-type-registration-in-6-8/
  * @see https://make.wordpress.org/core/2024/10/17/new-block-type-registration-apis-to-improve-performance-in-wordpress-6-7/
  */
-function fleximple_blocks_example_block_init()
+function fleximple_blocks_template_block_init()
 {
-	load_plugin_textdomain('fleximple-blocks-example', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+	load_plugin_textdomain('fleximple-blocks-template', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 
 	/**
 	 * Registers the block(s) metadata from the `blocks-manifest.php` and registers the block type(s)
@@ -68,13 +68,13 @@ function fleximple_blocks_example_block_init()
 		register_block_type(__DIR__ . "/build/{$block_type}");
 	}
 }
-add_action('init', 'fleximple_blocks_example_block_init');
+add_action('init', 'fleximple_blocks_template_block_init');
 
 /**
  * Load the translation files.
  */
-function fleximple_blocks_example_set_script_translations()
+function fleximple_blocks_template_set_script_translations()
 {
-	wp_set_script_translations('fleximple-blocks-example-editor-script', 'fleximple-blocks-example', plugin_dir_path(__FILE__) . 'languages');
+	wp_set_script_translations('fleximple-blocks-template-editor-script', 'fleximple-blocks-template', plugin_dir_path(__FILE__) . 'languages');
 }
-add_action('init', 'fleximple_blocks_example_set_script_translations');
+add_action('init', 'fleximple_blocks_template_set_script_translations');
